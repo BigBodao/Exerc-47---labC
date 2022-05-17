@@ -1,17 +1,5 @@
-/*
-Uma certa firma fez uma pesquisa de mercado para saber se as pessoas 
-gostaram ou não de um novo produto lançado no mercado. Para isso, forneceu 
-o sexo do entrevistado e sua resposta (sim ou  não).  Sabendo-se  que  
-foram  entrevistadas  2000  pessoas,  fazer  um  algoritmo  que  calcule  e escreva
-a)O número de pessoas que responderam sim
-b)O número de pessoas que responderam não;
-c)A porcentagem de pessoas do sexo feminino que responderam sim
-d)A porcentagem de pessoas do sexo masculino que responderam não
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <locale.h>
 
 int main(void){
@@ -20,14 +8,14 @@ int main(void){
 	float fem_sim=0, masc_nao=0;
 	int sexo, resposta;
 	
-	printf("Digite quantas pessoas da lista serão analisadas: ");
+	printf("Digite quantas pessoas da lista serÃ£o analisadas: ");
 	scanf("%d", &x);
 	printf("===INICIANDO A PESQUISA ABAIXO===\n");
 
 	for(i=0; i<x; i++) {
-		printf("Digite a opção referente ao sexo da pessoa.\n1 = Masculino\n2 = Feminino\n\nSua Resposta: ");
+		printf("Digite a opÃ§Ã£o referente ao sexo da pessoa.\n1 = Masculino\n2 = Feminino\n\nSua Resposta: ");
 		scanf("%d", &sexo);
-		printf("Digite a opção referente a resposta da pessoa.\n1 = Sim\n2 = Não\n\nSua Resposta: ");
+		printf("Digite a opÃ§Ã£o referente a resposta da pessoa.\n1 = Sim\n2 = NÃ£o\n\nSua Resposta: ");
 		scanf("%d", &resposta);
 		//
 		if (sexo==1&&resposta==1) {
@@ -43,15 +31,15 @@ int main(void){
 			feminino++;	nao++;
 		}
 		else {
-			printf("Resposta inválida.");
+			printf("Resposta invÃ¡lida.");
 		}
 		printf("\n");
 	}
 	
-	printf("O resultado da pesquisa será apresentado abaixo.\n");
-	printf("NÚMERO DE PESSOAS QUE DISSERAM SIM: %d\n", sim);
-	printf("NÚMERO DE PESSOAS QUE DISSERAM NÃO: %d\n", nao);
-	printf("PORCENTAGEM DE PESSOAS DO SEXO MASCULINO QUE DISSERAM NÃO: %.2f%%\n", ((masc_nao*100)/masculino));
+	printf("O resultado da pesquisa serÃ¡ apresentado abaixo.\n");
+	printf("NÃšMERO DE PESSOAS QUE DISSERAM SIM: %d\n", sim);
+	printf("NÃšMERO DE PESSOAS QUE DISSERAM NÃƒO: %d\n", nao);
+	printf("PORCENTAGEM DE PESSOAS DO SEXO MASCULINO QUE DISSERAM NÃƒO: %.2f%%\n", ((masc_nao*100)/masculino));
 	printf("PORCENTAGEM DE PESSOAS DO SEXO FEMININO QUE DISSERAM SIM: %.2f%%\n", ((fem_sim*100)/feminino));
 	
 	return 0;
